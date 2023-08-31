@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Banking app
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,37 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Banking app
+      </ion-title>
     </ion-toolbar>
   </ion-header>
+   <div class="px-[30px]">
+          <ion-input
+          type="email"
+          fill="solid"
+          label="Email"
+          labelPlacement="floating"
+          errorText="Invalid email"
+          [(ngModel)]="body.email"
+          (ionChange)="onEmailChange($event)"
+        ></ion-input>
+        <ion-input
+            type="password"  
+            fill="solid"
+            label="Password"
+            labelPlacement="floating"
+            [(ngModel)]="body.password"  
+            (ionChange)="onPasswordChange($event) "
+          ></ion-input>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+          <ion-input
+          type="password"  
+          fill="solid"
+          label="Comform password"
+          labelPlacement="floating"
+          [(ngModel)]="body.comformPassword"  
+          (ionChange)="onComformPasswordChange($event) "
+        ></ion-input>
+          <ion-button expand="block" (click)="submit()">Block</ion-button>  
+   </div>
 </ion-content>
